@@ -107,14 +107,14 @@ nav.navbar .navbar-nav .nav-link.navbar-link {
 }
 nav.navbar .navbar-nav a.nav-link.navbar-link:hover,
 nav.navbar .navbar-nav a.nav-link.navbar-link.active {
-    opacity: 1;
+    opacity: 1; color:  rgb(242, 234, 16) !important;
 }
 span.navbar-text {
     display: flex;
     align-items: center;
 }
 .social-icon {
-    display: inline-block;
+    display: flex;
     margin-left: 14px;
 }
 .social-icon a {
@@ -134,7 +134,7 @@ span.navbar-text {
     width: 42px;
     height: 42px;
     position: absolute;
-    background-color: #ffffff;
+    background-color: rgb(242, 234, 16);
     border-radius: 50%;
     transform: scale(0);
 	transition: 0.3s ease-in-out;
@@ -169,7 +169,7 @@ span.navbar-text {
   width: 0%;
   height: 100%;
   position: absolute;
-  background-color: #fff;
+  background-color: rgb(242, 234, 16);
   left: 0;
   top: 0;
   z-index: -1;
@@ -521,11 +521,11 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   position: relative;
 }
 .contact form button:hover {
-  color: #fff;
+  color: #110101;
 }
 .contact form button::before {
   content: "";
-  background: #121212;
+  background: rgb(242, 234, 16);
   width: 0;
   height: 100%;
   position: absolute;
@@ -553,17 +553,27 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   padding: 85px 125px;
   margin-bottom: 80px;
   margin-top: -122px;
+  min-width: 100%;
 }
 .newsletter-bx h3 {
   font-weight: 700;
+  width: 100%;
+  display: block;
   letter-spacing: 0.5px;
-  line-height: 1.2em;
+  line-height: 1.2em;text-align: left;
+
+  white-space: normal;      /* Allows wrapping */
+  overflow-wrap: normal;    /* Let browser decide when to break words */
+  word-break: normal;       /* Prevents mid-word breaking */
 }
+
+
 .new-email-bx {
   background: #fff;
   padding: 5px;
   border-radius: 20px;
   position: relative;
+  min-width: 250px;
   z-index: 0;
   display: flex;
   align-items: center;
@@ -606,6 +616,45 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   letter-spacing: 0.5px;
   border-radius: 18px;
 }
+@media (max-width: 1040px) {
+ .newsletter-bx {
+  background: #FFFFFF;
+  border-radius: 55px;
+  color: #121212;
+  padding: 35px 60px;
+  margin-bottom: 80px;
+  margin-top: -122px;
+  min-width: 100%;
+}
+  }@media (max-width: 400px) {
+  .new-email-bx button {
+    background: linear-gradient(90.21deg, #AA367C -5.91%, #4A2FBD 111.58%);
+    padding: 10px 20px; /* Example: Reduce padding on smaller screens */
+    color: #fff;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    border-radius: 18px;
+    font-size: 14px; /* Optional: Smaller font for smaller screen */
+  }
+}@media (max-width: 600px) {
+.skill-bx {
+    background: #151515;
+    border-radius: 64px;
+    text-align: center;
+    padding: 10px 20px;
+    margin-top: -60px;
+}
+.project p {
+    color: #B8B8B8;
+    font-size: 18px;
+    letter-spacing: 0.8px;
+    line-height: 1.5em;
+    padding: 10px 20px;
+    text-align: center;
+    width: 100% !important;
+}
+}
+
 .footer img {
   width: 26%;
 }
@@ -616,3 +665,4 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   letter-spacing: 0.5px;
   margin-top: 20px;
 }
+/* rgb(242, 234, 16) */
